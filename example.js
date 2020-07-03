@@ -1,13 +1,13 @@
-var moneroWallet = require('./lib/wallet');
-var Wallet = new moneroWallet();
+var yadaWallet = require('./lib/wallet');
+var Wallet = new yadaWallet();
 
 // examples
 
-Wallet.create_wallet('monero_wallet').then(function(result){
+Wallet.create_wallet('yadacoin_wallet').then(function(result){
     console.log(result);
 });
 
-Wallet.open_wallet('monero_wallet').then((result) => {
+Wallet.open_wallet('yadacoin_wallet').then((result) => {
     console.log(result);
 });
 

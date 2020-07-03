@@ -1,23 +1,23 @@
-# monero-nodejs
+# yadacoin-nodejs
 
-A Node.js wallet manager for interacting with `monero-wallet-rpc`.
+A Node.js wallet manager for interacting with `yadacoin-wallet-rpc`.
 
-For more information about Monero, visit: https://getmonero.org
+For more information about YadaCoin, visit: https://yadacoin.io
 
-If you found this useful, please consider [contributing](https://getmonero.org/get-started/contributing/) to the Monero Project!
+If you found this useful, please consider [contributing](https://github.com/pdxwebdev/yadacoin/) to the YadaCoin Project!
 
 ## Install the package
 
 ### via NPM
 
 ```
-npm install monero-nodejs
+npm install yadacoin-nodejs
 ```
 
 ### Or clone the Github repository
 
 ```
-git clone https://github.com/PsychicCat/monero-nodejs.git
+git clone https://github.com/PsychicCat/yadacoin-nodejs.git
 ```
 
 ## Initializing a wallet
@@ -25,13 +25,13 @@ git clone https://github.com/PsychicCat/monero-nodejs.git
 Require the module:
 
 ```
-var moneroWallet = require('monero-nodejs');
+var yadaWallet = require('yadacoin-nodejs');
 ```
 
 Create a new instance of the wallet:
 
 ```
-var Wallet = new moneroWallet();
+var Wallet = new yadaWallet();
 ```
 
 This creates a wallet using the following simplewallet default RPC settings:
@@ -42,10 +42,10 @@ This creates a wallet using the following simplewallet default RPC settings:
 To connect to a wallet with different settings, pass in the values:
 
 ```
-var Wallet = new moneroWallet($HOSTNAME, $PORT);
+var Wallet = new yadaWallet($HOSTNAME, $PORT);
 ```
 
-**Note: versions of monero-nodejs prior to 3.0 require `hostname` with the 'http://' prefix, 3.0 and greater only require the IP address.**
+**Note: versions of yadacoin-nodejs prior to 3.0 require `hostname` with the 'http://' prefix, 3.0 and greater only require the IP address.**
 
 ## Testing
 
@@ -68,7 +68,7 @@ npm test
 Usage:
 
 ```
-Wallet.create_wallet('monero_wallet', '', 'English');
+Wallet.create_wallet('yadacoin_wallet', '', 'English');
 ```
 
 Creates a new wallet.
@@ -92,7 +92,7 @@ Returns an object with `error` field if unsuccessful.
 Usage:
 
 ```
-Wallet.open_wallet('monero_wallet', '');
+Wallet.open_wallet('yadacoin_wallet', '');
 ```
 
 Opens a wallet.
@@ -134,7 +134,7 @@ Usage:
 Wallet.address();
 ```
 
-Responds with the Monero address of the wallet.
+Responds with the YadaCoin address of the wallet.
 
 Example response:
 
@@ -150,7 +150,7 @@ Usage:
 Wallet.transfer(destinations, options);
 ```
 
-Transfers Monero to a single recipient OR a group of recipients in a single transaction. Responds with the transaction hash of the payment.
+Transfers YadaCoin to a single recipient OR a group of recipients in a single transaction. Responds with the transaction hash of the payment.
 
 Parameters:
 
@@ -320,7 +320,7 @@ Returns the standard address and payment ID corresponding to a given integrated 
 
 Parameters:
 
-* `address` - an integrated Monero address (_string_)
+* `address` - an integrated YadaCoin address (_string_)
 
 Example response:
 
